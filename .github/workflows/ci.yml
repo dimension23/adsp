@@ -1,10 +1,11 @@
 name: adsp-ci
-on: push
-  branches:
-    - main
-    - develop
-  tags:
-    - v*.*.*
+on:
+  push:
+    branches:
+      - main
+      - develop
+    tags:
+      - v*.*.*
 jobs:
   test:
     runs-on: ubuntu-latest
