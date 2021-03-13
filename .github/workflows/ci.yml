@@ -10,9 +10,8 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-        with:
-          fetch-depth: 1
+      - name: Check out repository
+        uses: actions/checkout@v2
       - name: Set-up Python 3.8
         uses: actions/setup-python@v1
         with:
@@ -34,3 +33,5 @@ jobs:
         run: poetry install --no-interaction --no-root
       - name: Code Quality
         run: poetry run black . --check
+      - name: Unit Tests
+        run:
