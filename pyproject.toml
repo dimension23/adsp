@@ -10,7 +10,7 @@ homepage = "https://github.com/dimension23/adsp"
 keywords = ["data science", "awesome"]
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.7"
 spacy = "^3.0.0"
 contractions = "^0.0.48"
 
