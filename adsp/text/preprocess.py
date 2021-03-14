@@ -38,6 +38,23 @@ class TextCleaner:
         self.remove_whitespaces = remove_whitespaces
         self.lowercase = lowercase
 
+    def __repr__(self):
+        return f"""
+        custom_chars: {self.custom_chars}
+        special_chars_pattern: {repr(self.special_chars_pattern)}
+        remove_custom_chars = {self.remove_custom_chars}
+        remove_urls = {self.remove_urls}
+        remove_html_tags = {self.remove_html_tags}
+        remove_diacritics = {self.remove_diacritics}
+        remove_digits = {self.remove_digits}
+        remove_digit_blocks = {self.remove_digit_blocks}
+        fix_contractions = {self.fix_contractions}
+        remove_special_chars = {self.remove_special_chars}
+        remove_stopwords = {self.remove_stopwords}
+        remove_whitespaces = {self.remove_whitespaces}
+        lowercase = {self.lowercase}
+        """
+
     def _remove_custom_chars(self, text: str) -> str:
         """
         Removes charracters listed in self.custom_chars
